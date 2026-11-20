@@ -2,4 +2,8 @@
 title: "Shark Attacks"
 ---
 
-This website analyzes global shark attack records.
+The Global Shark Attack File (GSAF) is a long-running archive of reported shark incidents. This site explores a cleaned dataset of 5,094 incidents dating back to 1900, including where and when they occurred, the activities involved, and their outcomes.
+
+Shark attacks attract attention, but public fear often exceeds the actual risk: most recorded incidents are non-fatal, and serious encounters are rare. The long-term rise in reports mirrors the growth of beach recreation and human exposure, rather than evidence that oceans have become more dangerous.
+
+Use the **Map** page to explore the geographic distribution of attacks by country. **Trends** highlights patterns over time and by ocean activity, including how fatal and non-fatal outcomes vary.
