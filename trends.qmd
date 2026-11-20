@@ -1,0 +1,34 @@
+---
+title: "Trends"
+---
+
+```{r}
+#| message: false
+library(tidyverse)
+```
+
+```{r}
+attacks <- read_rds("data/attacks.rds")
+```
+
+```{r}
+attacks |>
+  filter(Fatal_clean != "Unknown") |>
+  add_count(Activity, name = "total") |>
+  filter(total >= 50) |>
+  count(Activity, Fatal_clean) |>
+  ggplot(aes(
+    x = n,
+    y = fct_reorder(Activity, n, .fun = sum),
+    fill = Fatal_clean
+  )) +
+  geom_col() +
+  labs(
+    title = "Fatal and non-fatal attacks by activity",
+    subtitle = "Activities with at least 50 known-outcome incidents",
+    x = "Number of Attacks",
+    y = NULL,
+    fill = "Outcome"
+  ) +
+  theme_minimal()
+```
